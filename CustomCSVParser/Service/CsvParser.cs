@@ -28,7 +28,7 @@ namespace CustomCSVParser.Service
                 throw new FileNotFoundException("filePath");
             }
 
-            string[] lines = System.IO.File.ReadAllLines(filePath);
+            string[] lines = File.ReadAllLines(filePath);
             for (int i = 0; i < lines.Length; i++)
             {
                 string[] lineValues = lines[i].Split(CSV_SEPARATPOR);
